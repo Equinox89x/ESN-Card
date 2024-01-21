@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="screen.css">
+    <script defer src="/script/lib/data.js"></script>
+    <script defer src="/script/app.js"></script>
+    <script defer src="/script/lib/ESNcard.js"></script>
+    <script defer src="/script/lib/UIHandler.js"></script>
+    <script defer src="/script/lib/module.js"></script>
+    <title>ESN card</title>
+</head>
+
+<body class="c-body" id="js-body">
+    <section class="c-title">
+        <h1>ESN card Orders</h1>
+    </section>
+    <section class="c-nav">
+        <div id="js-nav-orders" class="c-nav__item u-ESNBluePastel u-ESNBlue--border">
+            <p>ORDERS</p>
+        </div>
+        <div id="js-nav-placeorder" class="c-nav__item c-nav__item--unselected u-ESNGreenPastel u-ESNGreen--border">
+            <p>PLACE ORDER</p>
+        </div>
+        <div id="js-nav-vieworder" class="c-nav__item c-nav__item--unselected u-ESNOrangePastel u-ESNOrange--border">
+            <p>VIEW ORDER</p>
+        </div>
+        <div id="js-nav-orderconfirmation" class="c-nav__item c-nav__item--unselected u-ESNPinkPastel u-ESNPink--border">
+            <p>ORDER CONFIRMATION</p>
+        </div>
+        <div id="js-nav-requests" class="c-nav__item c-nav__item--unselected u-ESNDarkBluePastel u-ESNDarkBlue--border">
+            <p>REQUESTS</p>
+        </div>
+    </section>
+
+    <section id="js-orders" class="c-content">
+        <div class="c-content__main u-ESNBluePastel">
+            <div class="o-button-container">
+                <div class="c-filters">
+                    <div id="js-AcceptAllOrders--orders" class="c-filters__item">
+                        <p>Accept All Orders</p>
+                    </div>
+                </div>
+                <div class="c-buttons">
+                    <div id="js-continue--orders" class="c-buttons__item">
+                        <p>Continue</p>
+                    </div>
+                </div>
+            </div>
+            <div class="c-content__items" id="js-content-holder--orders">
+            </div>
+        </div>
+
+        <div class="c-overlay-holder">
+                <div class="o-overlay c-confirmation-view u-ESNBluePastel">
+                    <div class="c-confirmation-view__container">
+                        <div id="js-small-view-title--orders"></div>
+                        <div id="js-small-view-content--orders" style="height: 100%; align-items: center; display: flex;"></div>
+                    </div>
+                </div>
+                <div class="o-overlay c-finalised-view u-ESNBluePastel" id="js-finalized-view-holder--orders">
+                </div>
+        </div>
+    </section>
+
+    <section id="js-placeorder" class="c-content">
+        <div id="js-placeorder--content" class="c-content--small c-content__main u-ESNGreenPastel">
+
+        </div>
+        <div class="c-overlay-holder c-overlay-holder--single">
+            <div class="o-overlay c-finalised-view c-finalized-view--large u-ESNGreenPastel" id="js-finalized-view-holder--placeorder">
+            </div>
+        </div>
+    </section>
+
+    <section id="js-vieworder" class="c-content">
+        <div id="js-vieworder--content" class="c-content--small c-content__main u-ESNOrangePastel">
+            <div class="c-vieworder-category">
+                <div class="c-vieworder__card">
+                    <div class="c-vieworder__card-requester">
+                        <p>18/03/2023</p>
+                        <p>ESN Belgium</p>
+                    </div>
+                        <p class="u-textSecondary"><span class="u-textMain">200</span> cards x 100 Euro</p>
+                        <p class="u-textSecondary"><span class="u-textMain">2000</span> Euro</p>
+                </div>
+            </div>
+            <div class="c-vieworder-category">
+                <div class="c-vieworder__card">
+                    <div class="c-vieworder__card-requester">
+                        <p>18/03/2023</p>
+                        <p>ESN Leonardo Kortrijk</p>
+                    </div>
+                    <p class="u-textSecondary"><span class="u-textMain">200</span> cards x 100 Euro</p>
+                    <p class="u-textSecondary"><span class="u-textMain">2000</span> Euro</p>
+                </div>
+                <div class="c-vieworder__card">
+                    <div class="c-vieworder__card-requester">
+                        <p>18/03/2023</p>
+                        <p>ESN Leonardo Kortrijk</p>
+                    </div>
+                    <p class="u-textSecondary"><span class="u-textMain">200</span> cards x 100 Euro</p>
+                    <p class="u-textSecondary"><span class="u-textMain">2000</span> Euro</p>
+                </div>
+                <div class="c-vieworder__card">
+                    <div class="c-vieworder__card-requester">
+                        <p>18/03/2023</p>
+                        <p>ESN Leonardo Kortrijk</p>
+                    </div>
+                    <p class="u-textSecondary"><span class="u-textMain">200</span> cards x 100 Euro</p>
+                    <p class="u-textSecondary"><span class="u-textMain">2000</span> Euro</p>
+                </div>
+            </div>
+            <div class="c-vieworder__summary c-vieworder__card">
+                <p class="u-textSecondary">200 NO cards - 2000 Euro</p>
+                <p class="u-textSecondary">1200 Section cards - 8000 Euro</p>
+                <p>Total: 10.000 Euro</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="js-orderconfirmation" class="c-content">
+        <div class="c-content__main u-ESNPinkPastel">
+            <div class="o-button-container">
+                <div class="c-filters">
+                    <div id="js-AcceptAllOrders--orderconfirmation" class="c-filters__item">
+                        <p>Accept All Orders</p>
+                    </div>
+                    <div id="js-ShowHandledOrders--orderconfirmation" class="c-filters__item">
+                        <p>Show Handled Orders</p>
+                    </div>
+                </div>
+            </div>
+            <div class="c-content__items" id="js-content-holder--orderconfirmation">
+            </div>
+        </div>
+    </section>
+
+    <section id="js-requests" class="c-content">
+        <div id="js-placeorder--content" class="c-content--small c-content__main u-ESNDarkBluePastel">
+
+        </div>
+    </section>
+
+</body>
+
+</html>
