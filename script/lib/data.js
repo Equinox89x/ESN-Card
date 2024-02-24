@@ -16,7 +16,7 @@ const DataModule = (function () {
         "ESN HELMo",
         "ESN HEPL",
         "ESN Louvain-la-Neuve",
-        "ESN Mechelenl",
+        "ESN Mechelen",
         "ESN Mons",
         "ESN Geel",
     ]
